@@ -353,14 +353,20 @@ h6 {
 .title::before {
     content: "";
     position: absolute;
-    background: #e1f0fa;
+    background-color: #e1f0fa;
     right: -60px;
     top: -40px;
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    transition: all 0.3s;
-    z-index: -5;
+    transition: all 1s;
+    z-index: -1;
+}
+
+.hi:hover .title::before {
+    background-color: #3498db;
+    width: 600px;
+    height: 600px;
 }
 
 .title:hover {
@@ -526,103 +532,26 @@ h6 {
     background-color: #f7fbfe;
 }
 
-.testimonial-text {
-    padding-top: 60px;
+.section6 .testimonial-wrap {
+    padding-left: 50px;
 }
 
-.fa-quote-right {
-    display: inline-block;
-    right: -5px;
-    position: relative;
-    top: 10px;
-    color: rgb(225, 240, 250);
-    font-size: 20px;
+.section6 .testimonials-carousel,
+.section6 .testimonials-slider {
+    overflow: hidden;
 }
 
-.fa-quote-left {
-    display: inline-block;
-    left: -5px;
-    position: relative;
-    color: rgb(225, 240, 250);
-    font-size: 20px;
-}
-
-.person1 p,
-.person2 p,
-.person3 p,
-.person4 p,
-.person5 p,
-.person1-first-one p,
-.person2-first-one p,
-.person3-first-one p,
-.person4-first-one p,
-.person5-first-one p {
-    font-style: italic;
-    margin: 15px auto;
-    font-size: 16px;
-    color: #444444;
-}
-
-.person1 h4,
-.person2 h4,
-.person3 h4,
-.person4 h4,
-.person5 h4,
-.person1-first-one h4,
-.person2-first-one h4,
-.person3-first-one h4,
-.person4-first-one h4,
-.person5-first-one h4 {
-    font-size: 14px;
-    color: rgb(153, 153, 153);
-    margin: 0px;
-}
-
-.person1 h3,
-.person2 h3,
-.person3 h3,
-.person4 h3,
-.person5 h3,
-.person1-first-one h3,
-.person2-first-one h3,
-.person3-first-one h3,
-.person4-first-one h3,
-.person5-first-one h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0px 5px;
-    color: rgb(17, 17, 17);
-}
-
-.person1,
-.person2,
-.person3,
-.person4,
-.person5 {
+.section6 .testimonial-item {
     box-sizing: content-box;
     padding: 30px 30px 30px 60px;
     margin: 30px 15px;
     min-height: 200px;
-    box-shadow: 0px 2px 12px rgb(0 0 0 / 8%);
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
     position: relative;
     background: #fff;
 }
 
-.row1,
-.row2,
-.row3,
-.row4,
-.row5 {
-    height: 310px;
-    overflow: hidden;
-    margin-bottom: 40px;
-}
-
-.person1 img,
-.person2 img,
-.person3 img,
-.person4 img,
-.person5 img {
+.section6 .testimonial-item .testimonial-img {
     width: 90px;
     border-radius: 10px;
     border: 6px solid #fff;
@@ -630,66 +559,60 @@ h6 {
     left: -45px;
 }
 
-.person1-first-one,
-.person2-first-one,
-.person3-first-one,
-.person4-first-one,
-.person5-first-one {
-    box-sizing: content-box;
-    padding: 30px 30px 30px 60px;
-    margin: 30px 15px;
-    min-height: 200px;
-    box-shadow: 0px 2px 12px rgb(0 0 0 / 8%);
+.section6 .testimonial-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    color: #111;
+    font-family: "Raleway", sans-serif;
+}
+
+.section6 .testimonial-item h4 {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+.section6 .testimonial-item .quote-icon-left,
+.section6 .testimonial-item .quote-icon-right {
+    color: #e1f0fa;
+    font-size: 26px;
+}
+
+.section6 .testimonial-item .quote-icon-left {
+    display: inline-block;
+    left: -5px;
     position: relative;
-    background: #fff;
 }
 
-.person1-first-one img,
-.person2-first-one img,
-.person3-first-one img,
-.person4-first-one img,
-.person5-first-one img {
-    width: 90px;
-    border-radius: 10px;
-    border: 6px solid #fff;
-    position: absolute;
-    left: -40px;
+.section6 .testimonial-item .quote-icon-right {
+    display: inline-block;
+    right: -5px;
+    position: relative;
+    top: 10px;
 }
 
-.carousel-item {
-    overflow: hidden;
+.section6 .testimonial-item p {
+    font-style: italic;
+    margin: 15px auto 15px auto;
 }
 
-.carousel-caption {
-    color: black;
+.section6 .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
 }
 
-.carousel-indicators {
-    margin: 0px;
-    height: 0px;
-}
-
-.carousel-indicators ol {
-    width: 100%;
-}
-
-.carousel-indicators li {
+.section6 .swiper-pagination .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
     background-color: #fff;
     opacity: 1;
     border: 1px solid #3498db;
-    border-radius: 50%;
 }
 
-.carousel-indicators li :active {
+.section6 .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #3498db;
-}
-
-.carousel-control-next,
-.carousel-control-prev {
-    background-color: transparent;
-    border: none;
 }
 
 
