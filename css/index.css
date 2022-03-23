@@ -93,13 +93,6 @@ h6 {
     color: #555555;
 }
 
-@media(max-width:1200px) {
-    .nav-bar-li {
-        padding-top: 5px;
-        padding-left: 0px;
-    }
-}
-
 .dropdown {
     padding: 7px 0 !important;
 }
@@ -1094,5 +1087,24 @@ footer a {
     }
     .hero-img img {
         width: 50%;
+    }
+}
+
+@media(max-width:1200px) {
+    .nav-bar-li {
+        padding-top: 5px;
+        padding-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .div2 h2 {
+        font-size: 30px;
+    }
+    .div2 h2::before,
+    .div2 h2::after {
+        display: block;
+        margin: 10px auto;
+        width: 100%;
     }
 }
