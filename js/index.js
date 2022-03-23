@@ -117,7 +117,11 @@ const scrollToSection = function(event) {
 
     const selectedSection = document.getElementById(event.target.getAttribute('data-link'));
 
-    selectedSection.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    selectedSection.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    setTimeout(() => {
+        let scrollTop = (window.pageYOffset || document.documentElement.scrollTop);
+        window.scrollTo(0, scrollTop - 100)
+    }, 1000)
 };
 
 //addEventListener  for each <a>
@@ -198,3 +202,32 @@ function backToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+/**
+ * Testimonials slider
+ */
+new Swiper(".testimonials-slider", {
+    speed: 600,
+    loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    slidesPerView: "auto",
+    pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+
+        1200: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+    },
+});
